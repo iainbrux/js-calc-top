@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<script>
+
+let computerPlay = function() {
+
+let randomNumber = (Math.floor(Math.random() * 3));
+
+if (randomNumber === 0) {
+    return console.log("Rock");
+} else if (randomNumber === 1) {
+    return console.log("Paper");
+} else if (randomNumber === 2) {
+    return console.log("Scissors");
+}
+} 
+
+let computerSelection = computerPlay();
+let playerSelection = "Rock";
+
+function playRound(computerSelection, playerSelection) {
+if (computerSelection == "Rock" && playerSelection == "Rock") {
+    return console.log("It's a tie.");
+} else if (computerSelection == "Paper" && playerSelection == "Rock") {
+    return console.log("Computer wins!")
+} else if (computerSelection == "Scissors" && playerSelection == "Rock") {
+    return console.log("Player wins!")
+} else if (computerSelection == "Scissors" && playerSelection == "Scissors") {
+    return console.log("It's a tie.");
+} else if (computerSelection == "Rock" && playerSelection == "Scissors") {
+    return console.log("Computer wins!");
+} else if (computerSelection == "Paper" && playerSelection == "Scissors") {
+    return console.log("Player wins!");
+} else if (computerSelection == "Paper" && playerSelection == "Paper") {
+    return console.log("It's a tie.");
+} else if (computerSelection == "Scissors" && playerSelection == "Paper") {
+    return console.log("Computer wins!");
+} else if (computerSelection == "Rock" && playerSelection == "Paper") {
+    return console.log("Player wins!")
+}
+}
+
+console.log(playRound(computerSelection, playerSelection));
+
+
+
+
+
+
+
+</script>
