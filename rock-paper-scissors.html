@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <script>
+    function computerPlay() {
 
-let computerPlay = function() {
+        let randomNumber = (Math.floor(Math.random() * 3));
 
-let randomNumber = (Math.floor(Math.random() * 3));
+        if (randomNumber === 0) {
+            console.log('Computer has chosen rock!');
+            return "rock";
+        } else if (randomNumber === 1) {
+            console.log('Computer has chosen paper!');
+            return "paper";
+        } else if (randomNumber === 2) {
+            console.log('Computer has chosen scissors!');
+            return "scissors";
+        }
+    }
 
-if (randomNumber === 0) {
-    return console.log("Rock");
-} else if (randomNumber === 1) {
-    return console.log("Paper");
-} else if (randomNumber === 2) {
-    return console.log("Scissors");
-}
-} 
+    let computerSelection = computerPlay();
 
-let computerSelection = computerPlay();
-let playerSelection = "Rock";
+    function playerSelection(string) {
+        return string.toLowerCase();
+    }
 
-function playRound(computerSelection, playerSelection) {
-if (computerSelection == "Rock" && playerSelection == "Rock") {
-    return console.log("It's a tie.");
-} else if (computerSelection == "Paper" && playerSelection == "Rock") {
-    return console.log("Computer wins!")
-} else if (computerSelection == "Scissors" && playerSelection == "Rock") {
-    return console.log("Player wins!")
-} else if (computerSelection == "Scissors" && playerSelection == "Scissors") {
-    return console.log("It's a tie.");
-} else if (computerSelection == "Rock" && playerSelection == "Scissors") {
-    return console.log("Computer wins!");
-} else if (computerSelection == "Paper" && playerSelection == "Scissors") {
-    return console.log("Player wins!");
-} else if (computerSelection == "Paper" && playerSelection == "Paper") {
-    return console.log("It's a tie.");
-} else if (computerSelection == "Scissors" && playerSelection == "Paper") {
-    return console.log("Computer wins!");
-} else if (computerSelection == "Rock" && playerSelection == "Paper") {
-    return console.log("Player wins!")
-}
-}
+    function playRound(computerSelection, playerSelection) {
+        if (computerSelection == "rock" && playerSelection == "rock") {
+            return "It's a tie.";
+        } else if (computerSelection == "paper" && playerSelection == "rock") {
+            return "Computer wins!";
+        } else if (computerSelection == "scissors" && playerSelection == "rock") {
+            return "Player wins!";
+        } else if (computerSelection == "scissors" && playerSelection == "scissors") {
+            return "It's a tie.";
+        } else if (computerSelection == "rock" && playerSelection == "scissors") {
+            return "Computer wins!";
+        } else if (computerSelection == "paper" && playerSelection == "scissors") {
+            return "Player wins!";
+        } else if (computerSelection == "paper" && playerSelection == "paper") {
+            return "It's a tie.";
+        } else if (computerSelection == "scissors" && playerSelection == "paper") {
+            return "Computer wins!";
+        } else if (computerSelection == "rock" && playerSelection == "paper") {
+            return "Player wins!";
+        }
+    }
 
-console.log(playRound(computerSelection, playerSelection));
-
-
-
-
-
-
-
+    function playGame() {
+        console.log(playRound(computerSelection, playerSelection('RoCK')));
+    }
 </script>
