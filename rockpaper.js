@@ -16,7 +16,7 @@ function computerPlay() {
 
 let computerSelection = computerPlay();
 
-let userInput = prompt('Please enter your pick of poison.');
+// let userInput = prompt('Please enter your pick of poison.');
 
 function playerSelection(userInput) {
     return userInput.toLowerCase();
@@ -47,5 +47,3 @@ function playRound(computerSelection, playerSelection) {
 function playGame() {
     alert(playRound(computerSelection, playerSelection(userInput)));
 }
-
-playGame();
