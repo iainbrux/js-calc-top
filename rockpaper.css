@@ -1,19 +1,22 @@
 .header-welcome {
-    font-size: 72px;
+    font-size: 52px;
     color: #f062b7;
     text-align: center;
 }
 
 .header-selection {
-    font-size: 48px;
+    font-size: 34px;
     color: #628ff0;
     text-align: center;
-    padding-bottom: 150px;
 }
 
 #buttons {
     display: flex;
     justify-content: space-evenly;
+}
+
+.player-score {
+    padding-bottom: 150px;
 }
 
 .btn1 {
