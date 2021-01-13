@@ -42,26 +42,32 @@ function playGame() {
             return gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. It's a tie.`;
         } else if (computerSelection == "paper" && playerSelection == "rock") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. Computer wins!`;
-            return computerScore++;
+            computerScore++;
+            return computerPoints.innerText = `Computer Score: ${computerScore}`;
         } else if (computerSelection == "scissors" && playerSelection == "rock") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. You win!`;
-            return playerScore++;
+            playerScore++;
+            return playerPoints.textContent = `Your Score: ${playerScore}`;
         } else if (computerSelection == "scissors" && playerSelection == "scissors") {
             return gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. It's a tie.`;
         } else if (computerSelection == "rock" && playerSelection == "scissors") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. Computer wins!`;
-            return computerScore++;
+            computerScore++;
+            return computerPoints.innerText = `Computer Score: ${computerScore}`;
         } else if (computerSelection == "paper" && playerSelection == "scissors") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. You win!`;
-            return playerScore++;
+            playerScore++;
+            return playerPoints.textContent = `Your Score: ${playerScore}`;
         } else if (computerSelection == "paper" && playerSelection == "paper") {
             return gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. It's a tie.`;
         } else if (computerSelection == "scissors" && playerSelection == "paper") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. Computer wins!`;
-            return computerScore++;
+            computerScore++;
+            return computerPoints.innerText = `Computer Score: ${computerScore}`;
         } else if (computerSelection == "rock" && playerSelection == "paper") {
             gameBoard.textContent = `Computer has thrown ${computerSelection} and you have thrown ${playerSelection}. You win!`;
-            return playerScore++;
+            playerScore++;
+            return playerPoints.textContent = `Your Score: ${playerScore}`;
         }
     }
 

@@ -1,3 +1,9 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .header-welcome {
     font-size: 52px;
     color: #f062b7;
@@ -11,12 +17,11 @@
 }
 
 #buttons {
+    min-width: 70vw;
+    font-family: 'Roboto Mono', sans-serif;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
-}
-
-.player-score {
-    padding-bottom: 150px;
 }
 
 .btn1 {
@@ -32,11 +37,14 @@
     outline: none;
 }
 
-.btn1:hover {
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
     color: black;
     background-color: white;
     transform: scale(1.05);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .btn2 {
@@ -52,13 +60,6 @@
     outline: none;
 }
 
-.btn2:hover {
-    color: black;
-    background-color: white;
-    transform: scale(1.05);
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
 .btn3 {
     border: 3px solid #ff3636;
     width: 250px;
@@ -72,15 +73,16 @@
     outline: none;
 }
 
-.btn3:hover {
-    color: black;
-    background-color: white;
-    transform: scale(1.05);
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
 body {
     background-color: #e2f5dc;
+    font-family: 'Roboto Mono', sans-serif;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/beige-tiles.png");
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
 
 .scoreboard {
@@ -95,19 +97,25 @@ body {
     align-content: center;
 }
 
-#playertotal {
-    padding-left: 100px;
-    font-size: 22px;
-    padding-bottom: 100px;
-}
-
+#playertotal,
 #computertotal {
-    padding-right: 100px;
     font-size: 22px;
-    padding-bottom: 100px;
+    margin: 5%;
 }
 
 #round {
     text-align: center;
     font-size: 22px;
+}
+
+button {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.watermark {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
